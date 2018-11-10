@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  {{ style('contents/css/framework.css') }}
+  {{ style('contents/css/font-awesome.css') }}
+  {{ style('contents/css/app.css') }}
+  <title>{{ title }} - Document</title>
+  {{ script('contents/js/vue.js') }}
+  @!section('head')
+</head>
+<body>
+  @!section('content')
+  {{ script('contents/js/app.js') }}
+  {{ script('contents/js/jquery.js') }}
+  {{ script('contents/js/uikit.js') }}
+  @!section('foot')
+</body>
+</html>

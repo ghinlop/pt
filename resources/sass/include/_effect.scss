@@ -1,0 +1,32 @@
+
+@keyframes isCheckbox{
+    0%{
+        width: 23px
+    }
+    70%{
+        width: 35px;
+    }
+    100%{
+        left: calc(100% - 25px);
+    }
+}
+@keyframes unIsCheckbox{
+    0%{
+        width: 23px;
+        left: calc(100% - 25px);
+    }
+    70%{
+        width: 35px;
+    }
+    100%{
+        left: 2px;
+    }
+}
+@keyframes showCheck{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

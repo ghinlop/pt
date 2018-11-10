@@ -1,0 +1,70 @@
+$a-gradien-color: #255b6f;
+$a-label-color: #fff;
+$a-label-bg: rgba($a-gradien-color, .8);
+
+.ghinlop {
+  &--hr{
+    text-align: center;
+    color: #fff;
+    position: relative;
+    &::before, &::after{
+      content: '';
+      position: absolute;
+      width: 40%;
+      height: 1px;
+      background-color: rgba(#fff, .5);
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &::before{
+      left: 0;
+    }
+    &::after{
+      right: 0;
+    }
+  }
+  &--kiemtra {
+    min-height: 100vh;
+    height: auto;
+    background-image: url("~/contents/images/blue-sky-night.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: auto;
+    label {
+      display: block;
+      padding: 5px;
+      height: 100%;
+      min-width: 40px;
+      background-color: $a-label-bg;
+      position: relative;
+      color: $a-label-color;
+
+      .fa {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    &__col {
+      min-height: 100vh;
+    }
+
+    &__noidung {
+      position: absolute;
+      top: 50%;
+      box-shadow: 0 0 45px rgba(#000, .5);
+      transform: translateY(-50%);
+      background-image: -webkit-linear-gradient(rgba($a-gradien-color, 0.3) 0%, rgba($a-gradien-color, 0.5) 90%);
+      background-image: -o-linear-gradient(rgba($a-gradien-color, 0.3) 0%, rgba($a-gradien-color, 0.5) 90%);
+      background-image: linear-gradient(rgba($a-gradien-color, 0.3) 0%, rgba($a-gradien-color, 0.5) 90%);
+      @include md {
+        padding: 35px;
+      }
+      @include sm {
+        padding: 15px;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@import '../core/color';
+
+@include color-list( 
+    $root: true, 
+    $include: true, 
+    $border: true, 
+    $grey: false, 
+    $red: false, 
+    $orange: false, 
+    $yellow: false, 
+    $green: false, 
+    $teal: false, 
+    $blue: false, 
+    $indigo: false, 
+    $purple: false, 
+    $pink: false
+);
+
+@include social-color (
+    $root: false, 
+    $include: false, 
+    $border: false
+);

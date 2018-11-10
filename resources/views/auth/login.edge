@@ -1,0 +1,48 @@
+@layout('layout')
+@section('content')
+<div id="kiemtra" class="ghinlop--kiemtra">
+  <div class="container h-100">
+    <div class="row uk-flex-center h-100">
+      <div class="col-md-4 uk-position-static ghinlop--kiemtra__col">
+        @if(hasErrorFor('email') || hasErrorFor('username') || hasErrorFor('password'))
+          <ul class="nolist uk-alert uk-alert-danger">
+          </ul>
+        @endif
+        <div class="ghinlop--kiemtra__noidung uk-animation-fade">
+          <div class="uk-position-relative">
+            <div class="uk-animation-slide-bottom-medium">
+              <form action="{{ route('auth.signin') }}" method="post">
+                {{ csrfField() }}
+                <div class="form-group uk-animation-slide-bottom-medium">
+                  <div class="uk-flex uk-flex-stretch rounded uk-overflow-hidden">
+                    <div class="uk-width-auto"><label for="email"><i class="fa fa-fw fa-lg fa-envelope"></i></label></div>
+                    <div class="uk-width-expand">
+                      <input type="email" class="uk-input {{ hasErrorFor('email') ? 'uk-form-danger uk-animation-shake' : '' }}"
+                        autocomplete="off" id="email" name="email" placeholder="Địa chỉ email">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group uk-animation-slide-bottom-medium">
+                  <div class="uk-flex uk-flex-stretch rounded uk-overflow-hidden">
+                    <div class="uk-width-auto"><label for="password"><i class="fa fa-fw fa-lg fa-lock"></i></label></div>
+                    <div class="uk-width-expand">
+                      <input type="password" class="uk-input" id="password" name="password" placeholder="Mật khẩu">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group uk-animation-slide-bottom-medium mb-0 text-center">
+                  <button class="uk-button uk-button-primary uk-width-1-1">Đăng Nhập</button>
+                  <div class="d-block py-4 ghinlop--hr">
+                    <i class="fa fa-angle-down fa-lg"></i>
+                  </div>
+                  <a href="#" class="text-white d-inline-block">Đăng Ký</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+@endsection

@@ -1,0 +1,54 @@
+:hover,
+:focus {
+    // color: #29D321;
+    text-decoration: none!important;
+}
+
+.nolist {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+span {
+    line-height: 1;
+}
+.uk-checkbox{
+  background-color: #fff;
+  border: 1px solid #888;
+  @include effect;
+  &:checked{
+    border: 1px solid transparent;
+  }
+}
+.uk-pagination {
+    span {
+        line-height: 1.5;
+    }
+}
+
+.none-input-number {
+    margin: 0;
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+.text-sm-small{
+    @include sm{
+        font-size: 80%;
+    }
+}
+@include md {
+    .nodesk {
+        .uk-offcanvas {
+            position: static !important;
+            display: block;
+        }
+        .uk-offcanvas-bar {
+            position: static;
+            width: 100%;
+            background-color: $nocolor;
+            padding: 0;
+            @include transform(unset);
+        }
+    }
+}

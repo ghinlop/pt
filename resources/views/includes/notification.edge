@@ -1,0 +1,18 @@
+@if(flashMessage('notification'))
+    <div class="uk-alert-{{flashMessage('notification.type')}}" uk-alert>
+      <a class="uk-alert-close" uk-close></a>
+      @if(flashMessage('notification.type') === 'danger')
+        <ul>
+          @each(msg in flashMessage('notification.msg'))
+            <li>{{msg.message}}</li>
+          @endeach
+        </ul>
+      @endif
+
+      @if(flashMessage('notification.type') === 'success')
+        @each(msg in flashMessage('notification.msg'))
+          <P>{{{msg.message}}}</P>
+        @endeach
+      @endif
+    </div>
+@endif

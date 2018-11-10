@@ -1,0 +1,286 @@
+@mixin color-list(
+    $root: true, 
+    $include: true, 
+    $border: true, 
+    $grey: false, 
+    $red: false, 
+    $orange: false, 
+    $yellow: false, 
+    $green: false, 
+    $teal: false, 
+    $blue: false, 
+    $indigo: false, 
+    $purple: false, 
+    $pink: false) {
+    @if $root {
+        :root {
+            @if $grey {
+                --grey-white: #FFFFFF;
+                --grey-lightest: #F8FAFC;
+                --grey-lighter: #F1F5F8;
+                --grey-light: #DAE1E7;
+                --grey: #B8C2CC;
+                --grey-dark: #8795A1;
+                --grey-darker: #606F7B;
+                --grey-darkest: #3D4852;
+                --grey-black: #22292F;
+            }
+            @if $red {
+                --red-lightest: #FCEBEA;
+                --red-lighter: #F9ACAA;
+                --red-light: #EF5753;
+                --red: #E3342F;
+                --red-dark: #CC1F1A;
+                --red-darker: #621B18;
+                --red-darkest: #3B0D0C;
+            }
+            @if $orange {
+                --orange-lightest: #FFF5EB;
+                --orange-lighter: #FCD9B6;
+                --orange-light: #FAAD63;
+                --orange: #F6993F;
+                --orange-dark: #DE751F;
+                --orange-darker: #613B1F;
+                --orange-darkest: #462A16;
+            }
+            @if $yellow {
+                --yellow-lightest: #FCFBEB;
+                --yellow-lighter: #FFF9C2;
+                --yellow-light: #FFF382;
+                --yellow: #FFED4A;
+                --yellow-dark: #F2D024;
+                --yellow-darker: #684F1D;
+                --yellow-darkest: #453411;
+            }
+            @if $green {
+                --green-lightest: #E3FCEC;
+                --green-lighter: #A2F5BF;
+                --green-light: #51D88A;
+                --green: #38C172;
+                --green-dark: #1F9D55;
+                --green-darker: #1A4731;
+                --green-darkest: #0F2F21;
+            }
+            @if $teal {
+                --teal-lightest: #E8FFFE;
+                --teal-lighter: #A0F0ED;
+                --teal-light: #64D5CA;
+                --teal: #4DC0B5;
+                --teal-dark: #38A89D;
+                --teal-darker: #20504F;
+                --teal-darkest: #0D3331;
+            }
+            @if $blue {
+                --blue-lightest: #EFF8FF;
+                --blue-lighter: #BCDEFA;
+                --blue-light: #6CB2EB;
+                --blue: #3490DC;
+                --blue-dark: #2779BD;
+                --blue-darker: #1C3D5A;
+                --blue-darkest: #12283A;
+            }
+            @if $indigo {
+                --indigo-lightest: #E6E8FF;
+                --indigo-lighter: #B2B7FF;
+                --indigo-light: #7886D7;
+                --indigo: #6574CD;
+                --indigo-dark: #5661B3;
+                --indigo-darker: #2F365F;
+                --indigo-darkest: #191E38;
+            }
+            @if $purple {
+                --purple-lightest: #F3EBFF;
+                --purple-lighter: #D6BBFC;
+                --purple-light: #A779E9;
+                --purple: #9561E2;
+                --purple-dark: #794ACF;
+                --purple-darker: #382B5F;
+                --purple-darkest: #21183C;
+            }
+            @if $pink {
+                --pink-lightest: #FFEBEF;
+                --pink-lighter: #FFBBCA;
+                --pink-light: #FA7EA8;
+                --pink: #F66D9B;
+                --pink-dark: #EB5286;
+                --pink-darker: #6F213F;
+                --pink-darkest: #451225;
+            }
+        }
+    }
+    @if $include {
+        @if $grey {
+            @include color-render(grey-white, #FFFFFF, $border);
+            @include color-render(grey-lightest, #F8FAFC, $border);
+            @include color-render(grey-lighter, #F1F5F8, $border);
+            @include color-render(grey-light, #DAE1E7, $border);
+            @include color-render(grey, #B8C2CC, $border);
+            @include color-render(grey-dark, #8795A1, $border);
+            @include color-render(grey-darker, #606F7B, $border);
+            @include color-render(grey-darkest, #3D4852, $border);
+            @include color-render(grey-black, #22292F, $border);
+        }
+        @if $red {
+            @include color-render(red-lightest, #FCEBEA, $border);
+            @include color-render(red-lighter, #F9ACAA, $border);
+            @include color-render(red-light, #EF5753, $border);
+            @include color-render(red, #E3342F, $border);
+            @include color-render(red-dark, #CC1F1A, $border);
+            @include color-render(red-darker, #621B18, $border);
+            @include color-render(red-darkest, #3B0D0C, $border);
+        }
+        @if $orange {
+            @include color-render(orange-lightest, #FFF5EB, $border);
+            @include color-render(orange-lighter, #FCD9B6, $border);
+            @include color-render(orange-light, #FAAD63, $border);
+            @include color-render(orange, #F6993F, $border);
+            @include color-render(orange-dark, #DE751F, $border);
+            @include color-render(orange-darker, #613B1F, $border);
+            @include color-render(orange-darkest, #462A16, $border);
+        }
+        @if $yellow {
+            @include color-render(yellow-lightest, #FCFBEB, $border);
+            @include color-render(yellow-lighter, #FFF9C2, $border);
+            @include color-render(yellow-light, #FFF382, $border);
+            @include color-render(yellow, #FFED4A, $border);
+            @include color-render(yellow-dark, #F2D024, $border);
+            @include color-render(yellow-darker, #684F1D, $border);
+            @include color-render(yellow-darkest, #453411, $border);
+        }
+        @if $green {
+            @include color-render(green-lightest, #E3FCEC, $border);
+            @include color-render(green-lighter, #A2F5BF, $border);
+            @include color-render(green-light, #51D88A, $border);
+            @include color-render(green, #38C172, $border);
+            @include color-render(green-dark, #1F9D55, $border);
+            @include color-render(green-darker, #1A4731, $border);
+            @include color-render(green-darkest, #0F2F21, $border);
+        }
+        @if $teal {
+            @include color-render(teal-lightest, #E8FFFE, $border);
+            @include color-render(teal-lighter, #A0F0ED, $border);
+            @include color-render(teal-light, #64D5CA, $border);
+            @include color-render(teal, #4DC0B5, $border);
+            @include color-render(teal-dark, #38A89D, $border);
+            @include color-render(teal-darker, #20504F, $border);
+            @include color-render(teal-darkest, #0D3331, $border);
+        }
+        @if $blue {
+            @include color-render(blue-lightest, #EFF8FF, $border);
+            @include color-render(blue-lighter, #BCDEFA, $border);
+            @include color-render(blue-light, #6CB2EB, $border);
+            @include color-render(blue, #3490DC, $border);
+            @include color-render(blue-dark, #2779BD, $border);
+            @include color-render(blue-darker, #1C3D5A, $border);
+            @include color-render(blue-darkest, #12283A, $border);
+        }
+        @if $indigo {
+            @include color-render(indigo-lightest, #E6E8FF, $border);
+            @include color-render(indigo-lighter, #B2B7FF, $border);
+            @include color-render(indigo-light, #7886D7, $border);
+            @include color-render(indigo, #6574CD, $border);
+            @include color-render(indigo-dark, #5661B3, $border);
+            @include color-render(indigo-darker, #2F365F, $border);
+            @include color-render(indigo-darkest, #191E38, $border);
+        }
+        @if $purple {
+            @include color-render(purple-lightest, #F3EBFF, $border);
+            @include color-render(purple-lighter, #D6BBFC, $border);
+            @include color-render(purple-light, #A779E9, $border);
+            @include color-render(purple, #9561E2, $border);
+            @include color-render(purple-dark, #794ACF, $border);
+            @include color-render(purple-darker, #382B5F, $border);
+            @include color-render(purple-darkest, #21183C, $border);
+        }
+        @if $pink {
+            @include color-render(pink-lightest, #FFEBEF, $border);
+            @include color-render(pink-lighter, #FFBBCA, $border);
+            @include color-render(pink-light, #FA7EA8, $border);
+            @include color-render(pink, #F66D9B, $border);
+            @include color-render(pink-dark, #EB5286, $border);
+            @include color-render(pink-darker, #6F213F, $border);
+            @include color-render(pink-darkest, #451225, $border);
+        }
+    }
+}
+
+@mixin social-color ($root: true, $include: true, $border: false) {
+    @if $root {
+        :root {
+            --facebook: #3b5999;
+            --messenger: #0084ff;
+            --twitter: #55acee;
+            --linkedin: #0077B5;
+            --skype: #00AFF0;
+            --dropbox: #007ee5;
+            --wordpress: #21759b;
+            --vimeo: #1ab7ea;
+            --slideshare: #0077b5;
+            --vk: #4c75a3;
+            --tumblr: #34465d;
+            --yahoo: #410093;
+            --google-plus: #dd4b39;
+            --pinterest: #bd081c;
+            --youtube: #cd201f;
+            --stumbleupon: #eb4924;
+            --reddit: #ff5700;
+            --quora: #b92b27;
+            --yelp: #af0606;
+            --weibo: #df2029;
+            --producthunt: #da552f;
+            --hackernews: #ff6600;
+            --soundcloud: #ff3300;
+            --blogger: #f57d00;
+            --whatsapp: #25D366;
+            --wechat: #09b83e;
+            --line: #00c300;
+            --medium: #02b875;
+            --vine: #00b489;
+            --slack: #3aaf85;
+            --instagram: #e4405f;
+            --dribbble: #ea4c89;
+            --flickr: #ff0084;
+            --foursquare: #f94877;
+            --behance: #131418;
+            --snapchat: #FFFC00;
+        }
+    }
+    @if $include {
+        @include color-render(facebook, #3b5999, $border);
+        @include color-render(messenger, #0084ff, $border);
+        @include color-render(twitter, #55acee, $border);
+        @include color-render(linkedin, #0077B5, $border);
+        @include color-render(skype, #00AFF0, $border);
+        @include color-render(dropbox, #007ee5, $border);
+        @include color-render(wordpress, #21759b, $border);
+        @include color-render(vimeo, #1ab7ea, $border);
+        @include color-render(slideshare, #0077b5, $border);
+        @include color-render(vk, #4c75a3, $border);
+        @include color-render(tumblr, #34465d, $border);
+        @include color-render(yahoo, #410093, $border);
+        @include color-render(google-plus, #dd4b39, $border);
+        @include color-render(pinterest, #bd081c, $border);
+        @include color-render(youtube, #cd201f, $border);
+        @include color-render(stumbleupon, #eb4924, $border);
+        @include color-render(reddit, #ff5700, $border);
+        @include color-render(quora, #b92b27, $border);
+        @include color-render(yelp, #af0606, $border);
+        @include color-render(weibo, #df2029, $border);
+        @include color-render(producthunt, #da552f, $border);
+        @include color-render(hackernews, #ff6600, $border);
+        @include color-render(soundcloud, #ff3300, $border);
+        @include color-render(blogger, #f57d00, $border);
+        @include color-render(whatsapp, #25D366, $border);
+        @include color-render(wechat, #09b83e, $border);
+        @include color-render(line, #00c300, $border);
+        @include color-render(medium, #02b875, $border);
+        @include color-render(vine, #00b489, $border);
+        @include color-render(slack, #3aaf85, $border);
+        @include color-render(instagram, #e4405f, $border);
+        @include color-render(dribbble, #ea4c89, $border);
+        @include color-render(flickr, #ff0084, $border);
+        @include color-render(foursquare, #f94877, $border);
+        @include color-render(behance, #131418, $border);
+        @include color-render(snapchat, #FFFC00, $border);
+    }
+}

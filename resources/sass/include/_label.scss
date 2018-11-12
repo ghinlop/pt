@@ -1,0 +1,20 @@
+.label{
+  &--icon{
+    &__left{
+      display: block;
+      padding: 5px;
+      height: 100%;
+      min-width: 40px;
+      background-color: $a-label-bg;
+      position: relative;
+      color: $a-label-color;
+
+      .fa {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}

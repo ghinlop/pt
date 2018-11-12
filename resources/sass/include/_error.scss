@@ -1,0 +1,19 @@
+.error{
+  &--content{
+    background-color: #fff;
+    box-shadow: 0 0 35px rgba(#000, .3);
+    padding: 15px;
+    &__title{
+      font-weight: bold;
+      @include md{
+        font-size: 70pt;
+      }
+      @include sm{
+        font-size: 40pt;
+      }
+      span{
+        display: inline-block;
+      }
+    }
+  }
+}

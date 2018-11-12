@@ -4,14 +4,18 @@
       @if(flashMessage('notification.type') === 'danger')
         <ul>
           @each(msg in flashMessage('notification.msg'))
+            @if(msg.message)
             <li>{{msg.message}}</li>
+            @else
+            <li>{{{msg}}}</li>
+            @endif
           @endeach
         </ul>
       @endif
 
       @if(flashMessage('notification.type') === 'success')
         @each(msg in flashMessage('notification.msg'))
-          <P>{{{msg.message}}}</P>
+          <P>{{{msg}}}</P>
         @endeach
       @endif
     </div>

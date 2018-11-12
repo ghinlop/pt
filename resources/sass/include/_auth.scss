@@ -1,7 +1,3 @@
-$a-gradien-color: #255b6f;
-$a-label-color: #fff;
-$a-label-bg: rgba($a-gradien-color, .8);
-
 .ghinlop {
   &--hr{
     text-align: center;
@@ -30,28 +26,13 @@ $a-label-bg: rgba($a-gradien-color, .8);
     background-repeat: no-repeat;
     background-position: top;
     background-size: auto;
-    label {
-      display: block;
-      padding: 5px;
-      height: 100%;
-      min-width: 40px;
-      background-color: $a-label-bg;
-      position: relative;
-      color: $a-label-color;
-
-      .fa {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
-    }
 
     &__col {
       min-height: 100vh;
     }
 
     &__noidung {
+      width: 100%;
       position: absolute;
       top: 50%;
       box-shadow: 0 0 45px rgba(#000, .5);

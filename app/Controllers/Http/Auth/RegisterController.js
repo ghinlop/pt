@@ -6,7 +6,9 @@ const { validateAll } = use('Validator'),
       Mail            = use('Mail')
 class RegisterController {
   index({view}){
-    return view.render('auth.register')
+    return view.render('auth.register', {
+      title: 'Đăng Ký Tài Khoản'
+    })
   }
   async signup({request, session, response}){
     // Check Validator
@@ -15,7 +17,6 @@ class RegisterController {
       email:      'required|email|unique:users,email',
       password:   'required'
     })
-    console.log(validation.fails())
     if(validation.fails()){
       session.flash({
         notification: {
@@ -34,7 +35,7 @@ class RegisterController {
       confirm_token:  randomString({length: 60})
     })
     // Send email token confirm register
-    await Mail.send('emails.confirm', user.toJSON(), msg => {
+    await Mail.send('emails.email_confirm', user.toJSON(), msg => {
         msg
           .to(user.email)
           .from('do-not-reply@ghinlop.com')
@@ -47,7 +48,7 @@ class RegisterController {
       }
     })
 
-    return response.redirect('back')
+    return response.route('auth.noted')
   }
 }
 

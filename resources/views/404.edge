@@ -1,0 +1,25 @@
+@layout('layout')
+
+@section('content')
+<div class="container">
+  <div class="row uk-flex-center">
+    <div class="col-md-4">
+      <div class="error mt-5">
+        <div class="error--content">
+          <h1 class="text-center error--content__title">
+            <span>4</span>
+            <span class="text-primary">0</span>
+            <span>4</span>
+          </h1>
+          <p class="text-uppercase text-center">
+            Trang web này không tồn tại hoặc đã được ẩn bởi quản trị
+            <div class="text-center d-block mt-3">
+              <a href="{{route('auth.getLogin')}}" class="uk-button uk-button-primary btn-circler uk-button-medium">Đăng nhập</a>
+            </div>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+@endsection
